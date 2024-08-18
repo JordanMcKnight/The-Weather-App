@@ -1,0 +1,7 @@
+{
+  "name": "codespaces-react",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

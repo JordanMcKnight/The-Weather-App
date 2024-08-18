@@ -1,13 +1,51 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Comic Sans MS', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffe6e6; /* Light pink background */
+  color: #333; /* Dark gray text for readability */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #cbccff; /* Pink background for code elements */
+  color: #0051ff; /* Orange text for code */
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.App-header {
+  background-color: #ffcc99; /* Light orange background */
+  color: #14c8ff; /* Deep pink text */
+  font-family: 'Brush Script MT', cursive; /* Fun cursive font for header */
+}
+
+.App {
+  text-align: center;
+  font-family: 'Comic Sans MS', sans-serif; /* Fun font for overall app */
+}
+
+input {
+  border: 2px solid #69ffe6; /* Pink border for input fields */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #6991ff; /* Pink button background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Comic Sans MS', sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #ff1493; /* Deep pink on hover */
 }

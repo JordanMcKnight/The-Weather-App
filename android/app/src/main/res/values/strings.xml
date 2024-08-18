@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">codespaces-react</string>
+    <string name="title_activity_main">codespaces-react</string>
+    <string name="package_name">codespaces.react</string>
+    <string name="custom_url_scheme">codespaces.react</string>
+</resources>

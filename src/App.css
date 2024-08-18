@@ -1,15 +1,25 @@
+/* General styling for the App */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  background-color: #f0f4f8; /* Light yellowish-blue background */
+}
+
+/* Styling for the main content area */
+.App-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the header */
+.App-header {
+  background-color: #282c34; /* Dark header background */
+  min-height: 20vh; /* Height of the header */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,14 +28,40 @@
   color: white;
 }
 
-.App-link {
+/* Styling for the footer */
+.App-footer {
+  background-color: #4f49a1; /* Maroon color for footer */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Styling for the last searched city display */
+.Last-searched {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Styling for the confirmation message */
+.Confirmation-message {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #61dafb;
+  background-color: #282c34;
   color: #61dafb;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.heart {
-  color: #ff0000;
-}
-
-.small {
-  font-size: 0.75rem;
+/* Styling for images */
+img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
 }
