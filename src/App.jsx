@@ -96,7 +96,7 @@ function App() {
         <h1>Weather App</h1>
       </header>
       <div className="App-content">
-        <div>
+        <div className="form-container">
           <label>
             Customer
             <input
@@ -105,8 +105,6 @@ function App() {
               onChange={(e) => setCustomerName(e.target.value)}
             />
           </label>
-        </div>
-        <div>
           <label>
             U.S. city
             <input
@@ -115,15 +113,15 @@ function App() {
               onChange={(e) => setCity(e.target.value)}
             />
           </label>
+          <button onClick={handleSubmit}>
+            Submit
+          </button>
         </div>
-        <button onClick={handleSubmit}>
-          Submit
-        </button>
 
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
         {weather && (
-          <div>
+          <div className="weather-info">
             <h2>Weather in {weather.name}</h2>
             <p>Temperature: {Math.round(kelvinToFahrenheit(weather.main.temp))}°F</p>
             <p>Weather: {weather.weather[0].description}</p>

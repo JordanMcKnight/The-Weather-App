@@ -152,3 +152,62 @@ button {
 button:hover {
   background-color: #3a3d6b; /* Darker maroon on hover */
 }
+
+/* Media Queries for Responsive Design */
+
+/* For screens wider than 1024px (typically desktops) */
+@media only screen and (min-width: 1024px) {
+  .App-header {
+    font-size: 3rem;
+  }
+
+  .App-content {
+    padding: 20px;
+  }
+}
+
+/* For screens 768px to 1023px wide (tablets or small laptops) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .App-header {
+    font-size: 2.5rem;
+  }
+
+  .App-content {
+    padding: 15px;
+  }
+}
+
+/* For screens narrower than 768px (phones) */
+@media only screen and (max-width: 767px) {
+  .App-header {
+    font-size: 2rem;
+  }
+
+  .App-content {
+    padding: 10px;
+  }
+}
+
+/* Styles for portrait orientation */
+@media only screen and (orientation: portrait) {
+  .App-header {
+    font-size: 1.8rem;
+  }
+
+  .weather-icon-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Styles for landscape orientation */
+@media only screen and (orientation: landscape) {
+  .App-header {
+    font-size: 2.5rem;
+  }
+
+  .weather-icon-container {
+    width: 120px;
+    height: 120px;
+  }
+}
