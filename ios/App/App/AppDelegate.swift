@@ -1,5 +1,6 @@
 import UIKit
 import Capacitor
+import SwiftUi 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

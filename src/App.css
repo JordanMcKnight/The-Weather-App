@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f0f4f8; /* Light yellowish-blue background */
+  background-color: #1a74ce; /* Midnight blue background */
+  color: #e5e5e5; /* Neon grey-scale text */
 }
 
 /* Styling for the main content area */
@@ -14,9 +15,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%; /* Full width */
 }
 
-/* Styling for the header */
+/* Styling for the header with neon trim animation */
 .App-header {
   background-color: #282c34; /* Dark header background */
   min-height: 20vh; /* Height of the header */
@@ -25,13 +27,35 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #e5e5e5; /* Neon grey-scale text */
+  position: relative;
+  overflow: hidden;
+}
+
+.App-header h1 {
+  font-size: 3rem; /* Adjust font size as needed */
+  position: relative;
+  color: #e5e5e5; /* Neon grey-scale text */
+  text-shadow: 0 0 5px rgba(255, 94, 0, 0.8); /* Initial neon glow */
+  animation: neon-text 4s linear 2; /* Animation duration and repeat */
+}
+
+@keyframes neon-text {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgb(255, 136, 0), 0 0 30px rgba(0, 255, 255, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 0, 212, 0.8);
+  }
 }
 
 /* Styling for the footer */
 .App-footer {
   background-color: #4f49a1; /* Maroon color for footer */
-  color: white;
+  color: #e5e5e5; /* Neon grey-scale text */
   padding: 1rem;
   text-align: center;
   font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -39,29 +63,32 @@
 
 /* Styling for the last searched city display */
 .Last-searched {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  position: fixed; /* Fixed position at the bottom of the screen */
+  bottom: 0; /* Align to the bottom */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  padding: 15px;
+  background-color: #333; /* Dark background for contrast */
+  border-radius: 10px; /* Rounded corners */
   font-size: 1.2rem;
-  color: #333;
+  color: #e5e5e5; /* Light text color */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+  border: 4px solid transparent; /* Transparent border for outline effect */
+  border-top-color: #61dafb; /* Neon color */
+  border-right-color: #282c34; /* Dark color for contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Styling for the confirmation message */
-.Confirmation-message {
-  margin-top: 20px;
+/* Styling for the input fields */
+input[type="text"] {
+  width: 90%; /* Full width, adjusted for padding */
+  max-width: 400px; /* Optional max width */
+  margin: 10px 0; /* Vertical margin */
   padding: 10px;
-  border: 1px solid #61dafb;
-  background-color: #282c34;
-  color: #61dafb;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 5px;
-}
-
-/* Styling for images */
-img {
-  width: 50px;
-  height: 50px;
-  margin-top: 10px;
+  border: 2px solid #e5e5e5; /* Neon grey border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #282c34; /* Dark background for input */
+  color: #e5e5e5; /* Neon grey text */
 }

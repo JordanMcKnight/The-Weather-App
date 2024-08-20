@@ -10,6 +10,7 @@ function App() {
   const [lastCity, setLastCity] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [userLocation, setUserLocation] = useState(null);
+  const [isCycling, setIsCycling] = useState(false);
 
   // Fetch weather data based on city name
   const fetchWeather = async (city) => {
@@ -35,8 +36,12 @@ function App() {
 
   // Handle form submission
   const handleSubmit = () => {
+    setIsCycling(true);  // Start the cycling animation
     fetchWeather(city);
     setShowConfirmation(true);
+    setTimeout(() => {
+      setIsCycling(false);  // Stop the cycling animation after one cycle
+    }, 2000); // Adjust time to match animation duration
   };
 
   // Convert temperature from Kelvin to Fahrenheit
@@ -122,10 +127,14 @@ function App() {
             <h2>Weather in {weather.name}</h2>
             <p>Temperature: {Math.round(kelvinToFahrenheit(weather.main.temp))}°F</p>
             <p>Weather: {weather.weather[0].description}</p>
-            <img
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
-              alt={weather.weather[0].description}
-            />
+            <div className="weather-icon-container">
+              <div className="weather-icon-frame"></div>
+              <img
+                className="weather-icon"
+                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+                alt={weather.weather[0].description}
+              />
+            </div>
           </div>
         )}
 
@@ -142,7 +151,7 @@ function App() {
         )}
       </div>
       <footer className="App-footer">
-        {/* Add footer content if neededi*/}
+        {/* Add footer content if needed */}
       </footer>
     </div>
   );
