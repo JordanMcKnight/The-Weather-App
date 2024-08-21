@@ -15,28 +15,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* Added padding for better spacing */
+  padding: 20px;
 }
 
 /* Styling for the header with neon trim animation */
 .App-header {
-  background-color: #282c34; /* Dark header background */
-  min-height: 20vh; /* Height of the header */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #e5e5e5; /* Neon grey-scale text */
-  position: relative;
-  overflow: hidden;
+  background-color: #ffcc99; /* Light orange background */
+  color: #14c8ff; /* Deep pink text */
+  font-family: 'Brush Script MT', cursive; /* Fun cursive font for header */
+  text-align: left; /* Align text to the left */
+  padding: 20px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+  border: 2px solid #000; /* 2px black outline */
 }
 
+/* Add 2px black outline to the header text */
 .App-header h1 {
   font-size: 3rem; /* Adjust font size as needed */
-  position: relative;
-  color: #e5e5e5; /* Neon grey-scale text */
-  text-shadow: 0 0 5px rgba(255, 94, 0, 0.8); /* Initial neon glow */
+  color: #14c8ff; /* Deep pink text */
+  text-shadow: 
+    1px 1px 0 #000, /* Top-left */
+    -1px -1px 0 #000, /* Bottom-right */
+    1px -1px 0 #000, /* Top-right */
+    -1px 1px 0 #000; /* Bottom-left */
   animation: neon-text 4s linear 2; /* Animation duration and repeat */
 }
 
@@ -103,7 +104,6 @@
   border: 4px solid transparent; /* Thinner neon trim */
   border-top-color: #61dafb;
   border-right-color: #282c34;
-  /* Remove rotation animation */
   pointer-events: none; /* Ensure it doesn't block interactions */
   z-index: 0; /* Place behind the container */
 }
@@ -119,65 +119,43 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch; /* Stretch items to fill container width */
   gap: 15px; /* Space between form elements */
   width: 100%; /* Full width */
-  max-width: 500px; /* Max width for large screens */
+  max-width: 100%; /* Max width for large screens */
 }
 
 /* Styling for input fields */
 input[type="text"] {
   padding: 10px;
-  border: 2px solid #ccc; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  width: 100%; /* Full width to match container */
-  max-width: 100%; /* Ensure it stretches to full width */
+  border: 2px solid #69ffe6; /* Pink border for input fields */
+  border-radius: 5px;
+  flex-grow: 1; /* Allow input to grow and fill available space */
   background-color: #000; /* Black background for text fields */
   color: #e5e5e5; /* Light text color */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  width: 100%; /* Ensure it takes full width of container */
 }
 
 /* Styling for buttons */
 button {
   padding: 10px 20px;
-  background-color: #4f49a1; /* Maroon background */
-  color: #e5e5e5; /* Light text color */
+  background-color: #6991ff; /* Pink button background */
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  width: 100%; /* Full width within the container */
 }
 
 button:hover {
-  background-color: #3a3d6b; /* Darker maroon on hover */
+  background-color: #ff1493; /* Deep pink on hover */
 }
 
 /* Media Queries for Responsive Design */
 
-/* For screens wider than 1024px (typically desktops) */
-@media only screen and (min-width: 1024px) {
-  .App-header {
-    font-size: 3rem;
-  }
-
-  .App-content {
-    padding: 20px;
-  }
-}
-
-/* For screens 768px to 1023px wide (tablets or small laptops) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .App-header {
-    font-size: 2.5rem;
-  }
-
-  .App-content {
-    padding: 15px;
-  }
-}
-
-/* For screens narrower than 768px (phones) */
 @media only screen and (max-width: 767px) {
   .App-header {
     font-size: 2rem;
@@ -186,28 +164,16 @@ button:hover {
   .App-content {
     padding: 10px;
   }
-}
 
-/* Styles for portrait orientation */
-@media only screen and (orientation: portrait) {
-  .App-header {
-    font-size: 1.8rem;
+  .form-container {
+    width: 100%; /* Full width on smaller screens */
   }
 
-  .weather-icon-container {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-/* Styles for landscape orientation */
-@media only screen and (orientation: landscape) {
-  .App-header {
-    font-size: 2.5rem;
+  input[type="text"] {
+    width: 100%; /* Ensure full width */
   }
 
-  .weather-icon-container {
-    width: 120px;
-    height: 120px;
+  button {
+    width: 100%;
   }
 }

@@ -3,40 +3,39 @@ body {
   font-family: 'Comic Sans MS', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffe6e6; /* Light pink background */
-  color: #333; /* Dark gray text for readability */
+  background-color: #ffe6e6;
+  color: #333;
 }
 
 code {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #cbccff; /* Pink background for code elements */
-  color: #0051ff; /* Orange text for code */
+  background-color: #cbccff;
+  color: #0051ff;
   padding: 2px 4px;
   border-radius: 4px;
 }
 
 .App-header {
-  background-color: #ffcc99; /* Light orange background */
-  color: #14c8ff; /* Deep pink text */
-  font-family: 'Brush Script MT', cursive; /* Fun cursive font for header */
-}
-
-.App {
-  text-align: center;
-  font-family: 'Comic Sans MS', sans-serif; /* Fun font for overall app */
+  background-color: #ffcc99;
+  color: #14c8ff;
+  font-family: 'Brush Script MT', cursive;
+  text-align: left; /* Align text to the left */
 }
 
 input {
-  border: 2px solid #69ffe6; /* Pink border for input fields */
+  border: 2px solid #69ffe6;
   padding: 10px;
   border-radius: 5px;
   font-family: 'Comic Sans MS', sans-serif;
   font-size: 1rem;
   margin-bottom: 10px;
+  width: 100%; /* Full width within the container */
+  background-color: #fff;
+  color: #333;
 }
 
 button {
-  background-color: #6991ff; /* Pink button background */
+  background-color: #6991ff;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -47,104 +46,22 @@ button {
 }
 
 button:hover {
-  background-color: #ff1493; /* Deep pink on hover */
+  background-color: #ff1493;
 }
 
 /* Media Queries for Responsive Design */
 
-/* Styles for portrait orientation */
-@media only screen and (orientation: portrait) {
-  body {
-    background-color: #ffb6c1; /* Lighter pink for portrait mode */
-  }
-
-  .App-header {
-    font-size: 1.5rem;
-  }
-
-  input {
-    width: 80%;
-    margin-bottom: 15px;
-  }
-
-  button {
-    width: 80%;
-  }
-}
-
-/* Styles for landscape orientation */
-@media only screen and (orientation: landscape) {
-  body {
-    background-color: #ffc0cb; /* Darker pink for landscape mode */
-  }
-
-  .App-header {
-    font-size: 2rem;
-  }
-
-  input {
-    width: 60%;
-    margin-bottom: 10px;
-  }
-
-  button {
-    width: 60%;
-  }
-}
-
-/* For screens wider than 1024px (typically desktops) */
-@media only screen and (min-width: 1024px) {
-  body {
-    font-size: 18px;
-  }
-
-  .App-header {
-    font-size: 3rem;
-  }
-
-  input {
-    width: 40%;
-  }
-
-  button {
-    width: 40%;
-  }
-}
-
-/* For screens 768px to 1023px wide (tablets or small laptops) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    font-size: 16px;
-  }
-
-  .App-header {
-    font-size: 2.5rem;
-  }
-
-  input {
-    width: 60%;
-  }
-
-  button {
-    width: 60%;
-  }
-}
-
-/* For screens narrower than 768px (phones) */
 @media only screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-
   .App-header {
     font-size: 2rem;
+    text-align: left; /* Keep text aligned to the left */
   }
 
   input {
-    width: 80%;
+    width: 100%; /* Full width within the container on smaller screens */
   }
 
   button {
-    width: 80%;
+    width: 100%;
   }
 }
